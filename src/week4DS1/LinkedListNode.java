@@ -14,6 +14,9 @@ public class LinkedListNode<T> {
     public LinkedListNode getNext(){
         return this.next;
     }
+    public void setNext(LinkedListNode<T> next){
+        this.next=next;
+    }
     public String toString(){
         if(this.next==null){
             return this.value+"";
