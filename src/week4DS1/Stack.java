@@ -14,7 +14,7 @@ public class Stack<A> {
             return null;
         } else {
             A temp=this.top.getValue();
-            this.top=this.top.getNext();
+            this.top=this.top.getNext() ;
             return temp;
         }
     }
