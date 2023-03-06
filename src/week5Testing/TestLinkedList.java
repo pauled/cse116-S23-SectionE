@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class TestLinkedList {
     public LinkedListNode<Integer> firstNSquared(int n){
+        //System.out.println("in firstNSquared");
         if (n>=1){
             return firstNSquaredHelper(n,null);
         } else {
@@ -16,6 +17,7 @@ public class TestLinkedList {
     }
     public LinkedListNode<Integer> firstNSquaredHelper(int n,
                     LinkedListNode<Integer> list){
+        //System.out.println("in firstNSquaredHelper n:"+n+" list:"+list);
         if (n==1){
             return new LinkedListNode(1,list);
         } else {
