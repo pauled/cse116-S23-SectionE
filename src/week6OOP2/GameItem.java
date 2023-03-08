@@ -14,4 +14,12 @@ public class GameItem {
         out+=" yLoc:"+this.yLoc;
         return out;
     }
+    public void move(double dx,double dy){
+        this.xLoc+=dx;
+        this.yLoc+=dy;
+    }
+    public void moveTo(double dx,double dy){
+        this.xLoc=dx;
+        this.yLoc=dy;
+    }
 }

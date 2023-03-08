@@ -22,5 +22,9 @@ public class Weapon extends GameItem{
         Weapon w1=new Weapon(1,2,5);
         w1.use(p1);
         System.out.println(w1);
+        w1.move(3,4);
+        System.out.println(w1);
+        HealthPotion h1=new HealthPotion(0,0,10);
+        h1.move(2,2);
     }
 }
