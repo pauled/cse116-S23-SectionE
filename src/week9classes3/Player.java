@@ -15,6 +15,14 @@ public class Player extends GameItem {
         this.damageDealt=4;
         this.inventory=new ArrayList<>();
     }
+    public void pickup(GameItem item){
+        this.inventory.add(item);
+    }
+    public void useItem(int loc){
+        if (loc<this.inventory.size()){
+            this.inventory.get(loc).use(this);
+        }
+    }
     public int getMaxHP(){
         return this.maxHP;
     }
@@ -39,30 +47,21 @@ public class Player extends GameItem {
         out+=this.damageDealt+super.toString();
         return out;
     }
-    public void pickUp(GameItem item){
-        this.inventory.add(item);
-    }
-    public void useInventoryItem(int location){
-        if (location<this.inventory.size()){
-            this.inventory.get(location).use(this);
-        }
-    }
 
     public static void main(String[] args) {
         Weapon w1=new Weapon(0,0,15);
-        GameItem w2=new Weapon(1,1,10);
-        GameItem w3=w1;
-        Player p1=new Player(50);
-        //Player p2=new Player(20)
-        //HealthPotion h1=new HealthPotion(0,0,10);
-
-
-        //p1.pickUp(h1);
-        p1.pickUp(w1);
-        //w1.attack(p2);
-        //System.out.println(p2);
-        //GameItem w2=w1;
-        //w2.attack(p2);
-        //System.out.println(p2);
+        GameItem gi1=new Weapon(1,2,10);
+        GameItem gi2=w1;
+        Weapon w2=(Weapon)gi2;
+        Player p1=new Player(10);
+        Player p2=new Player(6);
+        w1.attack(p1);
+        System.out.println(p1);
+        p1.pickup(w1);
+        p1.useItem(0);
+        System.out.println(p1);
+        double in1=5;
+        int d1=(int)in1;
+        //gi1.attack(p1);
     }
 }
