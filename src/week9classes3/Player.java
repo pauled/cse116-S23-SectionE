@@ -1,4 +1,17 @@
 package week9classes3;
+/*
+Vehicle
+-drive
+-reverse
+-turn
+-getNumberWheels
+ElectricVehicle
+GasVehicle
+carE
+carG
+MotorcycleGas
+ */
+
 
 import java.util.ArrayList;
 
@@ -6,7 +19,7 @@ public class Player extends GameItem {
     private int maxHP;
     private int HP;
     private int damageDealt;
-    private ArrayList<GameItem> inventory;
+    private ArrayList<Usable> inventory;
 
     public Player(int maxHP){
         super(0,0);
@@ -15,7 +28,7 @@ public class Player extends GameItem {
         this.damageDealt=4;
         this.inventory=new ArrayList<>();
     }
-    public void pickup(GameItem item){
+    public void pickup(Usable item){
         this.inventory.add(item);
     }
     public void useItem(int loc){
@@ -50,8 +63,10 @@ public class Player extends GameItem {
 
     public static void main(String[] args) {
         Weapon w1=new Weapon(0,0,15);
-        GameItem gi1=new Weapon(1,2,10);
-        GameItem gi2=w1;
+        Usable gi1=new Weapon(1,2,10);
+        Usable gi2=w1;
+        gi1.move(2,3);
+        w1.move(2,3);
         Weapon w2=(Weapon)gi2;
         Player p1=new Player(10);
         Player p2=new Player(6);

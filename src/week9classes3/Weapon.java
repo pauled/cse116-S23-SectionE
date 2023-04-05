@@ -1,6 +1,6 @@
 package week9classes3;
 
-public class Weapon extends GameItem {
+public class Weapon extends GameItem implements Usable{
     private int damage;
 
     public Weapon(double x,double y,int damage){
