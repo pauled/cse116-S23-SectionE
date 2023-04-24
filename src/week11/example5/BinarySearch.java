@@ -9,12 +9,15 @@ public class BinarySearch {
      * data structure, false otherwise
      */
     public static boolean binarySearch(ArrayList<Integer> sortedNumbers, int toFind) {
+        if (sortedNumbers.size()==0){
+            return false;
+        }
         int midpoint = sortedNumbers.size() / 2;
         int midValue = sortedNumbers.get(midpoint);
         if (midpoint == toFind) {
             return true;
         } else if (toFind < midValue) {
-            sortedNumbers.removeAll(sortedNumbers.subList(midpoint, sortedNumbers.size() - 1));
+            sortedNumbers.removeAll(sortedNumbers.subList(midpoint, sortedNumbers.size()));
             binarySearch(sortedNumbers, toFind);
         } else {
             sortedNumbers.removeAll(sortedNumbers.subList(0, midpoint + 1));

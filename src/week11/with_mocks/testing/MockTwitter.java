@@ -1,5 +1,5 @@
 package week11.with_mocks.testing;
-/*
+
 import week11.with_mocks.TwitterAPI;
 
 public class MockTwitter implements TwitterAPI {
@@ -26,4 +26,3 @@ public class MockTwitter implements TwitterAPI {
     }
 
 }
-*/

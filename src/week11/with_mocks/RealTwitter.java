@@ -1,5 +1,5 @@
 package week11.with_mocks;
-/*
+
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
@@ -30,6 +30,10 @@ public class RealTwitter implements TwitterAPI {
             exception.printStackTrace();
         }
     }
+    /*
+    public void banUser(String id){
+      //code to do this
+    }
+     */
 
 }
-*/
